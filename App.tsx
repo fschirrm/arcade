@@ -38,8 +38,16 @@ import {
   usePlaygroundResume,
   useRpc,
 } from './utils/usePlayground';
+import backgroundMusicUrl from './assets/audio/bgm_arcade_loop.mp3';
+import bgNeonGridUrl from './assets/images/bg_neon_grid.png';
+import bgMagmaCoreUrl from './assets/images/bg_magma_core.png';
+import bgAstralCosmosUrl from './assets/images/bg_astral_cosmos.png';
+import paddleCyberUrl from './assets/images/paddle_cyber.png';
+import energyBallUrl from './assets/images/energy_ball.png';
+import tileBrickNeonUrl from './assets/images/tile_brick_neon.png';
+import powerupCapsuleUrl from './assets/images/powerup_capsule.png';
 
-const BACKGROUND_MUSIC_URL = 'assets/audio/bgm_arcade_loop.mp3';
+const BACKGROUND_MUSIC_URL = backgroundMusicUrl;
 
 interface CustomWindow extends Window {
   canHandleBackKey?: boolean;
@@ -140,13 +148,13 @@ export default function App() {
 
   // --- ASSETS ---
   const ASSETS_MANIFEST: Record<string, string> = {
-    bg_neon_grid: 'assets/images/bg_neon_grid.png',
-    bg_magma_core: 'assets/images/bg_magma_core.png',
-    bg_astral_cosmos: 'assets/images/bg_astral_cosmos.png',
-    paddle_cyber: 'assets/images/paddle_cyber.png',
-    energy_ball: 'assets/images/energy_ball.png',
-    tile_brick_neon: 'assets/images/tile_brick_neon.png',
-    powerup_capsule: 'assets/images/powerup_capsule.png',
+    bg_neon_grid: bgNeonGridUrl,
+    bg_magma_core: bgMagmaCoreUrl,
+    bg_astral_cosmos: bgAstralCosmosUrl,
+    paddle_cyber: paddleCyberUrl,
+    energy_ball: energyBallUrl,
+    tile_brick_neon: tileBrickNeonUrl,
+    powerup_capsule: powerupCapsuleUrl,
   };
   const {assets, isReady: assetsReady} = useAssets(ASSETS_MANIFEST);
 

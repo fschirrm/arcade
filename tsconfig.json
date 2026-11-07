@@ -13,6 +13,7 @@
     "noFallthroughCasesInSwitch": true,   /* Block logic bugs in switch statements */
     "module": "ESNext",
     "moduleResolution": "bundler",        /* Use modern bundler resolution for local imports */
+    "types": ["vite/client"],
     "resolveJsonModule": true,            /* Allow direct importing of .json configs */
     "isolatedModules": true,              /* Enforce file isolation required by esbuild */
     "noEmit": true,                       /* dry-run type check, do not write files to disk */
