@@ -1,0 +1,111 @@
+{
+  "title": "Tile Surge",
+  "hook": "Smash colorful tiles with skill",
+  "game_overview": "Deflect the bouncing energy sphere with your agile paddle to shatter vibrant tile formations across visually distinct themed levels.",
+  "artstyle": "pixelated",
+  "genre": "arcade",
+  "winning_condition": "Clear all destructible tiles across all three distinct themed stages.",
+  "losing_condition": "Deplete all reserve balls when the energy sphere falls below the paddle boundary.",
+  "player_mode": "single_player",
+  "supported_orientations": [
+    "landscape"
+  ],
+  "input_methods": [
+    "touch",
+    "mouse",
+    "keyboard",
+    "dpad"
+  ],
+  "score_options": {
+    "score_type": "points",
+    "score_order": "higher_is_better"
+  },
+  "low_end_device_support": true,
+  "mobile_playable": true,
+  "tv_playable": true,
+  "language": [
+    "en",
+    "de"
+  ],
+  "content_descriptors": [],
+  "controls": [
+    {
+      "input": "Left/Right Arrow Keys or A/D",
+      "action": "Slide the paddle horizontally across the bottom baseline."
+    },
+    {
+      "input": "Mouse Movement / Touch Drag",
+      "action": "Directly track and position paddle horizontally under cursor or finger."
+    },
+    {
+      "input": "Spacebar or Screen Tap",
+      "action": "Launch docked sphere at start of life or level."
+    },
+    {
+      "input": "Virtual Touch Left/Right Buttons",
+      "action": "Maneuver paddle on mobile devices."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Design Pillars",
+      "content": "1. Razor-sharp Responsive Control: The paddle must react instantly to keyboard, mouse, and touch inputs with zero lag. 2. Thematic Transformation: Each level completely reinvents the visual aesthetic\u2014from Neon Cyberpunk grid, to Molten Magma caverns, to Cosmic Astral voids. 3. Kinetic Juice: Satisfying particle bursts, subtle impact freeze-frames, and dynamic audio cues accompany every shattered tile.",
+      "summary": "Core guiding tenets of responsiveness, visual variety, and arcade satisfaction."
+    },
+    {
+      "title": "Core Loop",
+      "content": "The player launches the energy sphere, tracks its trajectory, and maneuvers the bottom paddle to deflect it back upward. The sphere shatters overhead tiles, accumulating score points and occasionally dropping valuable power-up capsules (such as paddle expand, multi-ball, and laser blasts). Once all destructible tiles are obliterated, the player transitions into the next level with a brand-new visual theme and denser tile layout. The cycle repeats across 3 levels until all stages are cleared or lives run out.",
+      "summary": "Moment-to-moment bounce, tile destruction, level advancement cycle."
+    },
+    {
+      "title": "Core Mechanics",
+      "content": "1. Angle-Directed Deflection: Bouncing the ball off the center reflects it symmetrically, while hitting near the edges creates sharper launch angles for surgical targeting. 2. Multi-Tiered Tiles: Standard single-hit tiles, reinforced double-hit tiles that crack before breaking, and special explosive tiles that burst neighboring tiles. 3. Power-Up Drops: Shattered tiles randomly drop capsules offering temporary advantages (Wider Paddle, Extra Ball, Slow Sphere, Penetration Laser). 4. Dynamic Level Themes: Stage 1 features a neon cyan grid theme, Stage 2 shifts to molten amber volcanic lava, and Stage 3 transforms into an astral amethyst starlight cosmos.",
+      "summary": "Paddle deflection physics, tile varieties, and power-up system."
+    },
+    {
+      "title": "Movement & Scrolling Alignment",
+      "content": "Scrolling Axis: Static single-screen arena; zero viewport scrolling. Asset Orientation Baseline: The paddle is aligned horizontally at the lower 10% of the canvas; all tiles form geometric rows in the upper 60%. Ball travels in continuous 2D vector space with constant speed and elastic collision against side and top borders. Movement Physics Dynamics: Paddle operates with immediate velocity response and hard screen edge clamping. Camera Behavior: Fixed camera framing the entire playfield.",
+      "summary": "Arena bounds, horizontal paddle traversal, and 2D vector ball kinetics."
+    },
+    {
+      "title": "Visual Hierarchy & Layering",
+      "content": "Layer Separation: Background layer consists of dark, desaturated themed backdrops (Level 1: deep dark cyan circuitry, Level 2: dark obsidian and lava glow, Level 3: deep nebula starfield) with no collision. The playfield layer features bright, high-contrast, glowing neon tiles, a metallic illuminated paddle, and a radiant white/cyan energy ball. Obstacle Affordance: Indestructible barriers (if present) are marked with metallic silver hazard stripes; explosive tiles pulse with orange energy.",
+      "summary": "Clear differentiation between playfield elements and background scenery."
+    },
+    {
+      "title": "Juice & Game Feel",
+      "content": "Anticipation Juice: Ball glow intensifies and emits subtle particle trail when speeding up. State Change Juice: Reinforced tiles crack visibly when damaged; paddle flashes white momentarily upon ball impact. Impact/Resolution Juice: Shattered tiles burst into 8-12 physics-enabled pixel debris; multi-tile combos trigger micro-screen shake and ascending synthesizer chime notes.",
+      "summary": "Audio-visual feedback across anticipation, collision, and destruction."
+    },
+    {
+      "title": "Fairness Tools",
+      "content": "A dotted launch guideline displays the initial sphere trajectory before launch. Ball velocity has a controlled maximum cap to prevent uncontrollable reflex traps. If a ball bounces horizontally for too long without hitting tiles or paddle, an imperceptible downward nudge is applied to prevent deadlock.",
+      "summary": "Player assist systems to maintain engagement and prevent frustration."
+    },
+    {
+      "title": "Characters & Enemies",
+      "content": "The player pilots the sleek high-tech defensive paddle. Passive hazards include reinforced tiles and moving bumper nodes in later stages.",
+      "summary": "Entities within the arcade arena."
+    },
+    {
+      "title": "Virtual Touch Controls Implementation",
+      "content": "Provide dual mobile control modes: 1) Direct touch dragging across the playfield with 1:1 paddle tracking, and 2) Optional on-screen virtual left/right arrow buttons positioned in the bottom left and right corners. Buttons are conditionally rendered when mobile touch is detected, styled with 'touch-none' to prevent page scrolling, and equipped with 'onPointerDown', 'onPointerUp', and 'onPointerLeave' handlers.",
+      "summary": "On-screen controls ensuring full mobile touch playability."
+    },
+    {
+      "title": "Social Mechanics & Audience",
+      "content": "Tailored for casual and classic arcade enthusiasts. Features persistent local high score tracking, clear stage clear bonuses, and combo streak multipliers.",
+      "summary": "Target audience and high-score motivation."
+    },
+    {
+      "title": "Accessibility",
+      "content": "High-contrast visual toggle, adjustable ball speed setting (Normal / Relaxed), fully playable via keyboard, mouse, or touch, and clearly readable HUD indicators.",
+      "summary": "Options for diverse player needs."
+    },
+    {
+      "title": "Structural Integrity",
+      "content": "Title Screen with Start and How-to-Play -> Stage 1 (Neon Grid) -> Stage 2 (Magma Core) -> Stage 3 (Astral Void) -> Victory Screen with final score tally. Game Over screen with instantaneous one-click replay.",
+      "summary": "Flow between title, stages, game over, and victory screens."
+    }
+  ]
+}
